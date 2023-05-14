@@ -5,8 +5,10 @@ import useSongsRatings from '../hooks/useSongsRatings';
 import SongPanel from '../components/SongPanel';
 import useGroupBy from '../hooks/useGroupBy';
 import { Rating, SongUrlReference } from '../types';
+import usePageTitle from '../hooks/usePageTitle';
 
 const LeaderboardPage = () => {
+	usePageTitle('Leaderboard');
 	const [playingSong, setPlayingSong] = useState<SongUrlReference>();
 	const audio = useRef<HTMLAudioElement>(null);
 	const songsRatings = useSongsRatings();

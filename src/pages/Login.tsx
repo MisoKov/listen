@@ -8,8 +8,10 @@ import Circle from '../components/Circle';
 import FullButton from '../components/FullButton';
 import TextButton from '../components/TextButton';
 import { signIn, signUp } from '../firebase';
+import usePageTitle from '../hooks/usePageTitle';
 
 const LoginPage = () => {
+	usePageTitle('Login');
 	const navigate = useNavigate();
 
 	const [isSignUp, setSignUp] = useState(false);

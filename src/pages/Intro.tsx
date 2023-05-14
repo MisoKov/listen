@@ -15,10 +15,12 @@ import { useState } from 'react';
 import { useNavigate } from '@tanstack/react-router';
 
 import Circle from '../components/Circle';
+import usePageTitle from '../hooks/usePageTitle';
 
 const IntroPage = () => {
 	const navigate = useNavigate();
 	const [activeStep, setActiveStep] = useState(0);
+	usePageTitle('Intro');
 
 	const handleNext = () => {
 		setActiveStep(prevActiveStep => prevActiveStep + 1);

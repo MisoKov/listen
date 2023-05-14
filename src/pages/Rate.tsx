@@ -3,8 +3,10 @@ import { Box, CircularProgress, Zoom } from '@mui/material';
 import useRandomSong from '../hooks/useRandomSong';
 import RateCard from '../components/RateCard';
 import { rateSong } from '../actions/rateSong';
+import usePageTitle from '../hooks/usePageTitle';
 
 const RatePage = () => {
+	usePageTitle('Rate');
 	const [song, newSong] = useRandomSong();
 
 	const rate = (decision: boolean) => {
