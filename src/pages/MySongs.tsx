@@ -4,8 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 import SongPanel from '../components/SongPanel';
 import { SongUrlReference } from '../types';
 import useMySongs from '../hooks/useMySongs';
+import usePageTitle from '../hooks/usePageTitle';
 
 const MySongsPage = () => {
+	usePageTitle('MySongs');
 	const [playingSong, setPlayingSong] = useState<SongUrlReference>();
 	const audio = useRef<HTMLAudioElement>(null);
 	const mySongs = useMySongs();
